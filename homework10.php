@@ -20,23 +20,22 @@ error_reporting(E_ALL);
   $file1 = fopen("./signup.txt", "w");
   if (0 == filesize($ftemp))
   {
-    $newline = "\n";
+    $newline = "_\r\n";
     for ($a = 0; $a < 8; $a++)
     {
       fwrite ($file1, $newline);
     }
     fclose ($file1);
   }
-  print file_get_contents("./signup.txt");
-
+/*
   $file2 = fopen("./signup.txt", "w");
   $masterlist = array ("", "", "", "", "", "", "", "", "", "");
-  for ($n = 0; $n < count ($masterlist); $n++)
+  for ($n = 0; $n < 8; $n++)
   {
     $masterlist[$n] = fgets($file2);
   }
 
-  for ($x = 0; $x < count ($namelist); $x++)
+  for ($x = 0; $x < 8; $x++)
   {
     if ($masterlist[$x] == "\n")
     {
@@ -44,11 +43,11 @@ error_reporting(E_ALL);
     }
   }
 
-  for ($y = 0; $y < count ($namelist); $y++)
+  for ($y = 0; $y < 8; $y++)
   {
     fwrite ($file2, $namelist[$y]);
   }
-  fclose ($file2);
+  fclose ($file2);*/
 
 
 function success ()
